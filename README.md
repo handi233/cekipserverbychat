@@ -16,3 +16,5 @@ cara pengunaan
 13. Nyalakan xampp apache dulu
 14.Jalankan program dengan open file cmd 
 15. Done
+
+disclamer: project tersebut open source
