@@ -17,5 +17,7 @@ cara pengunaan
 14.Jalankan program dengan open file cmd 
 15. Done
 
-Manfaat bagi Rumah Sakit:
+#Manfaat bagi Rumah Sakit:
 Pendeteksi jika webservice downtime di server utama rumah sakit dan mengganggu tiap ruangan pengguna simrs client seperti IGD,Rawat Inap,Apotek,Rawat Jalan Tool ini sangat ringan dibuat bahasa python 
+
+#Dislamer : Script diatas aman tidak mengirimkan data pribadi via telegram hanya untuk pendeteksi IP
