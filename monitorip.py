@@ -5,8 +5,8 @@ import time
 from datetime import datetime
 
 def kirim_telegram(pesan):
-    token = "-"  # Ganti dengan token bot kamu
-    chat_id = "-"                                    # Ganti dengan chat ID kamu telegram
+    token = "-"            # Ganti dengan token bot kamu
+    chat_id = "-"          # Ganti dengan chat ID kamu telegram
     url = f"https://api.telegram.org/bot{token}/sendMessage"
     
     data = {
@@ -42,10 +42,10 @@ def cek_mysql():
     now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     try:
         connection = mysql.connector.connect(
-            host='-',     # IP server MySQL (sama dengan SIMRS?)
+            host='-',               # IP server MySQL (sama dengan SIMRS?)
             port=3306,              # Port MySQL default
-            user='root',            # ganti dengan user kamu
-            password='password'     # ganti dengan password kamu
+            user='-',               # ganti dengan user kamu
+            password=''             # ganti dengan password kamu
         )
         if connection.is_connected():
             print(f"{now} - MySQL OK")
@@ -59,3 +59,4 @@ while True:
     cek_simrs()
     cek_mysql()
     time.sleep(60)  # cek tiap 1 menit
+
