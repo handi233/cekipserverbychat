@@ -23,6 +23,6 @@ Pendeteksi jika webservice downtime di server utama rumah sakit dan mengganggu t
 
 #Dislamer : Script diatas aman tidak mengirimkan data pribadi via telegram hanya untuk pendeteksi IP
 
+![WhatsApp Image 2025-08-24 at 09 52 10](https://github.com/user-attachments/assets/198a0658-e8a2-4230-9bff-9455dff1e075)
+![WhatsApp Image 2025-08-24 at 09 52 32](https://github.com/user-attachments/assets/5995e3de-8520-41d6-ad01-44f596c6d336)
 
-<img width="947" height="353" alt="Screenshot 2025-09-13 222858" src="https://github.com/user-attachments/assets/06c28205-9a87-47d0-9727-830a90043fd7" />
-<img width="515" height="371" alt="Screenshot 2025-09-13 223236" src="https://github.com/user-attachments/assets/b4c9ed23-1bbb-434e-8d65-c82db8198823" />
