@@ -4,16 +4,18 @@ import requests
 import time
 from datetime import datetime
 
+//Request API TAELEGRAM
 def kirim_telegram(pesan):
-    token = "-"            # Ganti dengan token bot kamu
-    chat_id = "-"          # Ganti dengan chat ID kamu telegram
+    token = "-"            // isi token
+    chat_id = "-"         // ID chat telegram
     url = f"https://api.telegram.org/bot{token}/sendMessage"
     
     data = {
         "chat_id": chat_id,
         "text": pesan
     }
-
+    
+//Notifikasi pengiriman 
     try:
         response = requests.post(url, data=data)
         if response.status_code == 200:
@@ -23,9 +25,10 @@ def kirim_telegram(pesan):
     except Exception as e:
         print(" Error kirim Telegram:", e)
 
+//pengecekan status 
 def cek_simrs():
     try:
-        response = requests.get("http://192.168.1.8/", timeout=5)  # Ganti dengan IP SIMRS kamu
+        response = requests.get("http://192.168.1.8/", timeout=5) //IP Server
         now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         if response.status_code == 200:
             print(f"{now} - SIMRS OK")
@@ -42,10 +45,10 @@ def cek_mysql():
     now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     try:
         connection = mysql.connector.connect(
-            host='-',               # IP server MySQL (sama dengan SIMRS?)
-            port=3306,              # Port MySQL default
-            user='-',               # ganti dengan user kamu
-            password=''             # ganti dengan password kamu
+            host='-',             //IP Server DB 
+            port=3306,            //Port      DB
+            user='-',             //Username  DB
+            password=''           //Password  DB
         )
         if connection.is_connected():
             print(f"{now} - MySQL OK")
@@ -58,5 +61,6 @@ def cek_mysql():
 while True:
     cek_simrs()
     cek_mysql()
-    time.sleep(60)  # cek tiap 1 menit
+    time.sleep(60) //pengecekan dengan detik
+
 
