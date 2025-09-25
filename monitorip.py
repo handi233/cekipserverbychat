@@ -46,7 +46,7 @@ def cek_mysql():
     try:
         connection = mysql.connector.connect(
             host='-',             //IP Server DB 
-            port=3306,            //Port      DB
+            port='-',            //Port      DB
             user='-',             //Username  DB
             password=''           //Password  DB
         )
@@ -62,5 +62,6 @@ while True:
     cek_simrs()
     cek_mysql()
     time.sleep(60) //pengecekan dengan detik
+
 
 
