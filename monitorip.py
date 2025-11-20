@@ -6,8 +6,7 @@ import time
 from datetime import datetime
 from dotenv import load_dotenv
 
-# ====== LOAD ENVIRONMENT VARIABLE ======
-# Buat file .env
+# ====== LOAD ENVIRONMENT VARIABLE =====
 # TELEGRAM_TOKEN=xxxx
 # TELEGRAM_CHAT_ID=xxxx
 # DB_HOST=192.168.xxx.xxx
@@ -85,5 +84,6 @@ if __name__ == "__main__":
         cek_simrs()
         cek_mysql()
         time.sleep(60)  # pengecekan setiap 60 detik
+
 
 
