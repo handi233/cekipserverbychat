@@ -38,9 +38,9 @@ def kirim_telegram(pesan: str):
         if response.status_code == 200:
             print("✅ Pesan Telegram terkirim.")
         else:
-            print(f"⚠️ Gagal mengirim pesan Telegram: {response.text}")
+            print(f" Gagal mengirim pesan Telegram: {response.text}")
     except Exception as e:
-        print(f"❌ Error kirim Telegram: {e}")
+        print(f" Error kirim Telegram: {e}")
 
 # ====== CEK SIMRS (SERVER APLIKASI) ======
 def cek_simrs():
@@ -49,13 +49,13 @@ def cek_simrs():
     try:
         response = requests.get("http://192.168.1.8/", timeout=5)  # Ganti dengan IP server SIMRS
         if response.status_code == 200:
-            print(f"{now} - SIMRS ✅ OK")
+            print(f"{now} - SIMRS OK")
         else:
-            pesan = f"{now} - ⚠️ SIMRS ERROR - Status: {response.status_code}"
+            pesan = f"{now} -  SIMRS ERROR - Status: {response.status_code}"
             print(pesan)
             kirim_telegram(pesan)
     except Exception as e:
-        pesan = f"{now} - ❌ Tidak bisa akses SIMRS: {e}"
+        pesan = f"{now} -  Tidak bisa akses SIMRS: {e}"
         print(pesan)
         kirim_telegram(pesan)
 
@@ -72,10 +72,10 @@ def cek_mysql():
             connection_timeout=5
         )
         if connection.is_connected():
-            print(f"{now} - MySQL ✅ OK")
+            print(f"{now} - MySQL  OK")
             connection.close()
     except Error as e:
-        pesan = f"{now} - ❌ MySQL DOWN: {e}"
+        pesan = f"{now} -  MySQL DOWN: {e}"
         print(pesan)
         kirim_telegram(pesan)
 
@@ -85,3 +85,4 @@ if __name__ == "__main__":
         cek_simrs()
         cek_mysql()
         time.sleep(60)  # pengecekan setiap 60 detik
+
