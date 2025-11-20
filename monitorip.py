@@ -6,11 +6,7 @@ import time
 from datetime import datetime
 from dotenv import load_dotenv
 
-# ====== LOAD ENVIRONMENT VARIABLE =====
-# TELEGRAM_TOKEN=xxxx
-# TELEGRAM_CHAT_ID=xxxx
-# DB_HOST=192.168.xxx.xxx
-# DB_PORT=3306
+# ====== Load Variablenya =====
 # DB_USER=username
 # DB_PASS=password
 
@@ -23,7 +19,7 @@ DB_PORT = os.getenv("DB_PORT")
 DB_USER = os.getenv("DB_USER")
 DB_PASS = os.getenv("DB_PASS")
 
-# ====== FUNGSI KIRIM TELEGRAM ======
+# ====== api yg kirim statusnya ke telegram======
 def kirim_telegram(pesan: str):
     """Mengirim pesan ke Telegram bot"""
     url = f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage"
@@ -41,7 +37,7 @@ def kirim_telegram(pesan: str):
     except Exception as e:
         print(f" Error kirim Telegram: {e}")
 
-# ====== CEK SIMRS (SERVER APLIKASI) ======
+# ====== cek responnya ======
 def cek_simrs():
     """Cek apakah SIMRS (aplikasi rumah sakit) dapat diakses"""
     now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -58,7 +54,7 @@ def cek_simrs():
         print(pesan)
         kirim_telegram(pesan)
 
-# ====== CEK MYSQL (SERVER DATABASE) ======
+# ======  (Server DB) ======
 def cek_mysql():
     """Cek koneksi server MySQL tanpa akses ke data pasien"""
     now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -78,12 +74,13 @@ def cek_mysql():
         print(pesan)
         kirim_telegram(pesan)
 
-# ====== LOOP CEK TIAP 60 DETIK ======
+# ====== Ngecek setiap 60 detik ======
 if __name__ == "__main__":
     while True:
         cek_simrs()
         cek_mysql()
         time.sleep(60)  # pengecekan setiap 60 detik
+
 
 
 
