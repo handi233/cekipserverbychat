@@ -7,7 +7,7 @@ from datetime import datetime
 from dotenv import load_dotenv
 
 # ====== LOAD ENVIRONMENT VARIABLE ======
-# Buat file .env di direktori yang sama:
+# Buat file .env
 # TELEGRAM_TOKEN=xxxx
 # TELEGRAM_CHAT_ID=xxxx
 # DB_HOST=192.168.xxx.xxx
@@ -36,7 +36,7 @@ def kirim_telegram(pesan: str):
     try:
         response = requests.post(url, data=data, timeout=10)
         if response.status_code == 200:
-            print("✅ Pesan Telegram terkirim.")
+            print(" Pesan Telegram terkirim.")
         else:
             print(f" Gagal mengirim pesan Telegram: {response.text}")
     except Exception as e:
@@ -85,4 +85,5 @@ if __name__ == "__main__":
         cek_simrs()
         cek_mysql()
         time.sleep(60)  # pengecekan setiap 60 detik
+
 
