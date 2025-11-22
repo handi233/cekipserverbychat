@@ -19,7 +19,7 @@ DB_PORT = os.getenv("DB_PORT")
 DB_USER = os.getenv("DB_USER")
 DB_PASS = os.getenv("DB_PASS")
 
-# ====== api yg kirim statusnya ke telegram======
+# ====== api kirimnya statusnya ke telegram======
 def kirim_telegram(pesan: str):
     """Mengirim pesan ke Telegram bot"""
     url = f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage"
@@ -80,6 +80,7 @@ if __name__ == "__main__":
         cek_simrs()
         cek_mysql()
         time.sleep(60)  # pengecekan setiap 60 detik
+
 
 
 
