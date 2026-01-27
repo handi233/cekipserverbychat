@@ -6,7 +6,7 @@ import time
 from datetime import datetime
 from dotenv import load_dotenv
 
-# ====== Load Variablenya =====
+# ====== Load Variable =====
 # DB_USER=username
 # DB_PASS=password
 
@@ -74,12 +74,13 @@ def cek_mysql():
         print(pesan)
         kirim_telegram(pesan)
 
-# ====== Ngecek setiap 60 detik ======
+# ====== Ngecek tiap 60 detik ======
 if __name__ == "__main__":
     while True:
         cek_simrs()
         cek_mysql()
         time.sleep(60)  # pengecekan setiap 60 detik
+
 
 
 
