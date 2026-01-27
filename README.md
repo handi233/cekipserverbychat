@@ -1,6 +1,6 @@
-cara pengunaan
-1.Download Pyton
-2.Atur Envirosemen dengan add sesuaikan file pyton
+#Cara Pengunaan
+1.Download Python
+2.Atur Envirosement dengan add sesuaikan file pyton
 3.Buat Folder Utama C:
 4.Buka telegram search @botfather
 5. tekan /start dan bikin username dan user diakhiri bot @userbot
@@ -16,7 +16,7 @@ cara pengunaan
 #Manfaat bagi Rumah Sakit:
 Pendeteksi jika webservice downtime di server utama rumah sakit dan mengganggu tiap ruangan pengguna simrs client seperti IGD,Rawat Inap,Apotek,Rawat Jalan Tool ini sangat ringan dibuat bahasa python 
 
-#Dislamer : Script diatas hanyalah bentuk eksperiment dari pengembang sebagai fortofolio pribadi, sarannya sebaiknya di uji dulu dan disesuaikan isi script jangan dipakai langsung untuk production demi keamanan data di DATABASE kalo masih ingin tetap menggunakan script diatas, Penulis tidak bertanggung jawab terjadi sesuatu diluar penggunaan script ini karena penulis sudah mengingatkan
+#Dislamer : Script diatas hanyalah bentuk eksperiment dari pengembang sebagai fortofolio pribadi, sarannya sebaiknya di uji dulu dan disesuaikan isi script jangan dipakai langsung untuk production , Penulis tidak bertanggung jawab terjadi sesuatu diluar penggunaan script ini karena penulis sudah mengingatkan
 
 
 ![WhatsApp Image 2025-08-24 at 09 52 10](https://github.com/user-attachments/assets/198a0658-e8a2-4230-9bff-9455dff1e075)
