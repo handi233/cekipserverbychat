@@ -1,7 +1,7 @@
 #Cara Pengunaan
 1.Download Python
 2.Atur Envirosement dengan add sesuaikan file pyton
-3.Buat Folder Utama C:
+3.Buat Folder Utama Default C:\monitoring_simrs
 4.Buka telegram search @botfather
 5. tekan /start dan bikin username dan user diakhiri bot @userbot
 6. Dapatkan token di salin didalam file script .env
